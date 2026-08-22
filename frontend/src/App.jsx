@@ -71,8 +71,8 @@ export default function App() {
         body: JSON.stringify({ problemId: problem.id, code, reasoning, timeSpent }),
       });
       if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || `HTTP ${res.status}`);
+        const err = await res.json().catch(() => null);
+        throw new Error(err?.error || `HTTP ${res.status}`);
       }
       const data = await res.json();
       setFeedback(data);
