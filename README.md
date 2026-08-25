@@ -81,7 +81,14 @@ Get a key from [console.anthropic.com](https://console.anthropic.com).
 
 ### 3. Run
 
-Open two terminals:
+```bash
+npm run dev
+```
+
+Runs both the backend and frontend together (color-coded output per process). Open **http://localhost:5173** in your browser.
+
+<details>
+<summary>Run them separately instead</summary>
 
 ```bash
 # Terminal 1 — backend
@@ -90,8 +97,7 @@ npm run dev:backend
 # Terminal 2 — frontend
 npm run dev:frontend
 ```
-
-Open **http://localhost:5173** in your browser.
+</details>
 
 ---
 
